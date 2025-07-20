@@ -8,15 +8,17 @@ categories: tutorial
 
 Got a BitLocker-encrypted drive that you need to access on your Mac? macOS has no built-in support for Microsoft's encryption, which means you're usually out of luck. Commercial solutions exist but cost money and often have limitations.
 
-There's now a free alternative: `anylinuxfs`. This open-source tool lets you mount NTFS (the primary Windows filesystem) on macOS with full read/write access — whether it's encrypted with BitLocker or not. It also supports Linux filesystems but that's a topic for another time.
+There's now a free alternative: [anylinuxfs](https://github.com/nohajc/anylinuxfs){:target="_blank"}. This open-source tool lets you mount NTFS (the primary Windows filesystem) on macOS with full read/write access — whether it's encrypted with BitLocker or not. It also supports Linux filesystems but that's a topic for another time.
 
 ## What You'll Need
 
-First, you need [Homebrew](https://brew.sh) installed. If you don't have it yet, open Terminal and run:
+First, you need [Homebrew](https://brew.sh){:target="_blank"} installed. If you don't have it yet, open Terminal and run:
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
+You will also need your BitLocker recovery key. This can usually be found under your [Microsoft account](https://account.microsoft.com/devices/recoverykey){:target="_blank"} or you may already have [another backup](https://support.microsoft.com/en-us/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6){:target="_blank"}. Windows lets you print it out on paper or save to a USB flash drive.
 
 ## Installation
 
@@ -131,7 +133,7 @@ diskutil unmount /Volumes/DESKTOP-7EP4D9Q_C__7-15-2025/
 
 ## Beyond BitLocker
 
-While this tutorial focuses on BitLocker-encrypted drives, `anylinuxfs` also works with regular unencrypted NTFS drives and of course Linux native filesystems such as ext4 or btrfs (with or without LUKS encryption), making it a versatile tool for accessing drives that macOS can't handle natively. You can visit [nohajc/anylinuxfs](https://github.com/nohajc/anylinuxfs) for more information.
+While this tutorial focuses on BitLocker-encrypted drives, `anylinuxfs` also works with regular unencrypted NTFS drives and of course Linux native filesystems such as ext4 or btrfs (with or without LUKS encryption), making it a versatile tool for accessing drives that macOS can't handle natively. You can visit [the project GitHub repository](https://github.com/nohajc/anylinuxfs){:target="_blank"} for more information.
 
 ## Wrapping Up
 
